@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = %q{refinerycms-acts-as-indexed}
-  s.version           = %q{3.0.0}
+  s.version           = %q{4.0.0.dev}
   s.description       = %q{An extension to handle the integration of Refinery CMS and ActsAsIndexed}
   s.summary           = %q{Refinery CMS ActsAsIndexed integration plugin}
   s.email             = %q{gems@p.arndt.io}
@@ -13,13 +13,13 @@ Gem::Specification.new do |s|
 
   s.files             = `git ls-files -- app/* lib/*`.split("\n")
 
-  s.add_dependency    'refinerycms-core', ['>= 3.0.0', '< 5.0']
-  s.add_dependency    'acts_as_indexed', '~> 0.8.0'
-  s.add_dependency    'decorators', '~> 2.0'
-  s.add_dependency    'stringex', '~> 2.5.2'
+  s.add_dependency    'refinerycms-core', '>= 4.0.0.dev'
+  s.add_dependency    'acts_as_indexed', '>= 0.8.0'
+  s.add_dependency    'decorators', '~> 2.0.1'
+  s.add_dependency    'stringex', '~> 2.6.1'
 
   s.cert_chain  = ['certs/parndt.pem']
-  if $0 =~ /gem\z/ && ARGV.include?("build") && ARGV.include?(__FILE__)
-    s.signing_key = File.expand_path("~/.ssh/gem-private_key.pem")
+  if $0 =~ /gem\z/ && ARGV.include?('build') && ARGV.include?(__FILE__)
+    s.signing_key = File.expand_path('~/.ssh/gem-private_key.pem')
   end
 end

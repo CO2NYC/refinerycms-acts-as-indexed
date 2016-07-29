@@ -1,5 +1,8 @@
 Gemfile.lock
 spec/dummy
 .bundle
-
+.idea
+idea
 *.log
+
+.idea/vcs.xml
